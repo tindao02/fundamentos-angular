@@ -7,12 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BemVindo4Component
 {
-  nome: string = 'Thiago';
-  idade: number = 10;
+  public nome: string = 'Thiago';
+  private idade: number = 10;
 
   public getIdade(): number
   {
     return this.idade;
+  }
+
+  public adicionar():void
+  {
+    console.log(`Adicionando ${this.nome}`);
+  }
+
+  public alterarNome(event: any): void
+  {
+    //console.log(event.target.value);
+    this.nome = event.target.value;
   }
 
 }

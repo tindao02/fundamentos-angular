@@ -10,5 +10,21 @@
 
     <h1>Meu nome é {{ nome }} </h1>
     <h2>Minha idade é {{ 1+ getIdade() }} </h2>
+
+    <br>
+
+    <div class="alert alert-success" role="alert">
+      Funcionário adicionado: <strong> {{ nome }} </strong>
+    </div>
+
+    <form>
+      <div class="form-group">
+        <label >Nome:</label>
+        <input type="text" placeholder="Example input placeholder" (input) = "alterarNome($event)" >
+      </div>
+    </form>
+
+    <button type="button" class="btn btn-primary" (click)="adicionar()" >Adicionar</button>
+
     
 </div>
