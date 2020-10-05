@@ -9,6 +9,7 @@ import { BemVindo2Component } from './bem-vindo2/bem-vindo2.component';
 import { BemVindo3Component } from './bem-vindo3/bem-vindo3.component';
 import { FooComponent } from './foo/foo.component';
 import { BemVindo4Component } from './bem-vindo4/bem-vindo4.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BemVindo4Component } from './bem-vindo4/bem-vindo4.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

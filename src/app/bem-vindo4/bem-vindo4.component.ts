@@ -9,7 +9,7 @@ export class BemVindo4Component
 {
   public nome: string = 'Thiago';
   private idade: number = 10;
-  private nome2: string = '';
+  public nome2 = 'Manoel';
 
   public getIdade(): number
   {
@@ -40,7 +40,8 @@ export class BemVindo4Component
 
   public adicionar2(nomeInput: string): void
   {
-    this.nome = nomeInput;
+    console.log(this.nome + " xxxx " + this.nome2);
+    
   }
 
 }

@@ -45,11 +45,24 @@
     <form>
       <div class="form-group">
         <label >Nome:</label>
-        <input type="text" placeholder="Example input placeholder" (input) = "alterarNome2($event)" >
+        <input type="text" placeholder="Example input placeholder" (input) = "nome2 = $event.target.value" >
       </div>
     </form>
 
     <button type="button" class="btn btn-primary" (click)="adicionar2(nomeInput.value)" [disabled]="getNome2().length == 0" >Adicionar</button>
+    
+    <br>
+    <br>
+    <h1>two-way data binding</h1>
+    <form>
+      <div class="form-group">
+        <label >Nome:</label>
+        <input type="text" placeholder="Example input placeholder" class="form-control"
+               [(ngModel)]="nome2" name="name2">
+      </div>
+    </form>
+
+    <button type="button" class="btn btn-primary" (click)="adicionar2(nomeInput.value)" [disabled]="nome2.length == 0" >Adicionar</button>
     
 
     
