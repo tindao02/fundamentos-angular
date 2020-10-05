@@ -26,4 +26,9 @@ export class BemVindo4Component
     this.nome = event.target.value;
   }
 
+  public adicionar2(nomeInput: string): void
+  {
+    this.nome = nomeInput;
+  }
+
 }
