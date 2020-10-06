@@ -10,6 +10,7 @@ export class BemVindo4Component
   public nome: string = 'Thiago';
   private idade: number = 10;
   public nome2 = 'Manoel';
+  private adicionado: boolean = false;
 
   public getIdade(): number
   {
@@ -19,6 +20,16 @@ export class BemVindo4Component
   public getNome2(): string
   {
     return this.nome2;
+  }
+
+  public getAdicionado(): boolean
+  {
+    return this.adicionado;
+  }
+
+  public setAdicionado(adicionado: boolean): void
+  {
+    this.adicionado = adicionado;
   }
 
   public adicionar():void
@@ -42,6 +53,18 @@ export class BemVindo4Component
   {
     console.log(this.nome + " xxxx " + this.nome2);
     
+  }
+
+  public adicionar3(): void
+  {
+    this.adicionado = true;
+    console.log(this.getAdicionado());
+    
+  }
+
+  public adicionar4(): void
+  {
+    this.adicionado = false;
   }
 
 }
