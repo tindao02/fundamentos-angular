@@ -11,6 +11,19 @@ export class BemVindo4Component
   private idade: number = 10;
   public nome2 = 'Manoel';
   private adicionado: boolean = false;
+  public funcionarios: any = [];
+  private nome3: string;
+  private ultimoId: number = 0;
+
+  public getNome3(): string
+  {
+    return this.nome3;
+  }
+
+  public setNome3(nome3: string): void
+  {
+    this.nome3 = nome3;
+  }
 
   public getIdade(): number
   {
@@ -64,7 +77,9 @@ export class BemVindo4Component
 
   public adicionar4(): void
   {
-    this.adicionado = false;
+    this.funcionarios.push({
+      id: ++this.ultimoId,
+      nome: this.getNome3()});
   }
 
 }

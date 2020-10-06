@@ -67,7 +67,7 @@
     <br>
     <br>
     <h1>Exibindo condicionalmente com as diretivas ngIf e hidden</h1>
-    <div class="alert alert-success" role="alert" *ngIf="adicionado">
+    <div class="alert alert-success" role="alert" *ngIf="getAdicionado()">
       Funcionário adicionado: <strong> {{ nome }} </strong>
     </div>
 
@@ -79,7 +79,25 @@
     </form>
     <button type="button" class="btn btn-primary" (click)="adicionar3()" >Adicionar</button>
 
-    
-
+    <br>
+    <br>
+    <h1>Iterando com a diretiva ngFor</h1>
+    <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+      <div class="col-2" *ngFor="let funcionario of funcionarios">
+        <div class="card" >
+          <img src="https://randomuser.me/api/portraits/women/{{funcionario.id}}.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4>{{ funcionario.nome }}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form>
+      <div class="form-group">
+        <label >Nome:</label>
+        <input type="text" placeholder="Example input placeholder" (input) = "setNome3($event.target.value)" class="form-control" >
+      </div>
+    </form>
+    <button type="button" class="btn btn-primary" (click)="adicionar4()" >Adicionar</button>
     
 </div>
