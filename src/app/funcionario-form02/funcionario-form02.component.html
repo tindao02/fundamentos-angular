@@ -1,0 +1,14 @@
+<div class="alert alert-success" role="alert" *ngIf="getAdicionado3()">
+    Funcionário adicionado: <strong> {{ nome5 }} </strong>
+</div>
+
+<form>
+    <div class="form-group">
+      <label >Nome:</label>
+      <input type="text" placeholder="Example input placeholder" class="form-control" 
+            [(ngModel)]="nome5" name="nome5" (focus)="setAdicionado3(false)" >
+    </div>
+</form>
+
+<button type="button" class="btn btn-primary" 
+        (click)="adicionar6()" [disabled]="nome5.length < 3" >Adicionar</button>

@@ -79,11 +79,12 @@
     </form>
     <button type="button" class="btn btn-primary" (click)="adicionar3()" >Adicionar</button>
 
+    
     <br>
     <br>
     <h1>Iterando com a diretiva ngFor</h1>
-    <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
-      <div class="col-2" *ngFor="let funcionario of funcionarios">
+    <div class="row" style="margin-bottom: 20px;">
+      <div class="col-2" *ngFor="let funcionario of funcionarios" style="padding-top: 20px;">
         <div class="card" >
           <img src="https://randomuser.me/api/portraits/women/{{funcionario.id}}.jpg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -95,9 +96,68 @@
     <form>
       <div class="form-group">
         <label >Nome:</label>
-        <input type="text" placeholder="Example input placeholder" (input) = "setNome3($event.target.value)" class="form-control" >
+        <input type="text" placeholder="Example input placeholder" [(ngModel)]="nome3" name="nome3" class="form-control"  >
       </div>
     </form>
-    <button type="button" class="btn btn-primary" (click)="adicionar4()" >Adicionar</button>
+    <button type="button" class="btn btn-primary" (click)="adicionar4()" [disabled]="nome3.length < 3" >Adicionar</button>
+
+
+    <br>
+    <br>
+    <h1>Binding de propriedades customizadas com @Input</h1>
+    <div class="row" style="margin-bottom: 20px;">
+      <div class="col-2" *ngFor="let funcionario of funcionarios2" style="padding-top: 20px;">
+        <app-funcionario-card [obj]="funcionario" ></app-funcionario-card>
+      </div>
+    </div>
+    <form>
+      <div class="form-group">
+        <label >Nome:</label>
+        <input type="text" placeholder="Example input placeholder" [(ngModel)]="nome4" name="nome4" class="form-control"  >
+      </div>
+    </form>
+    <button type="button" class="btn btn-primary" (click)="adicionar5()" [disabled]="nome4.length < 3" >Adicionar</button>
     
+    
+    <br>
+    <br>
+    <h1>9.15 Binding de eventos customizados com @Output e EventEmitter</h1>
+    <app-funcionario-form02 (criado)="aoAdicionar($event)" ></app-funcionario-form02>
+    <div class="row" style="margin-bottom: 20px;">
+      <div class="col-2" *ngFor="let funcionario of funcionarios3" style="padding-top: 20px;">
+        <app-funcionario-card [obj]="funcionario" ></app-funcionario-card>
+      </div>
+    </div>
+    
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </div>

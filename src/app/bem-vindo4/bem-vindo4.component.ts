@@ -11,15 +11,18 @@ export class BemVindo4Component
   private idade: number = 10;
   public nome2 = 'Manoel';
   private adicionado: boolean = false;
-  public funcionarios: any = [];
-  private nome3: string;
+  funcionarios: any = [];
+  funcionarios2: any = [];
+  funcionarios3 = [];
+  public nome3: string = '';
+  public nome4: string = '';
   private ultimoId: number = 0;
+  private ultimoId2: number = 0;
 
   public getNome3(): string
   {
     return this.nome3;
   }
-
   public setNome3(nome3: string): void
   {
     this.nome3 = nome3;
@@ -80,6 +83,20 @@ export class BemVindo4Component
     this.funcionarios.push({
       id: ++this.ultimoId,
       nome: this.getNome3()});
+    this.setNome3('');
+  }
+  
+  public adicionar5(): void
+  {
+    this.funcionarios2.push({
+      id: ++this.ultimoId2,
+      nome: this.nome4});
+    this.nome4 = '';
+  }
+
+  aoAdicionar(funcionario)
+  {
+    this.funcionarios3.push(funcionario);
   }
 
 }

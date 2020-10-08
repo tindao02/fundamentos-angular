@@ -10,6 +10,9 @@ import { BemVindo3Component } from './bem-vindo3/bem-vindo3.component';
 import { FooComponent } from './foo/foo.component';
 import { BemVindo4Component } from './bem-vindo4/bem-vindo4.component';
 import { FormsModule } from '@angular/forms';
+import { FuncionarioCardComponent } from './funcionario-card/funcionario-card.component';
+import { FuncionarioFormComponent } from './funcionario-form/funcionario-form.component';
+import { FuncionarioForm02Component } from './funcionario-form02/funcionario-form02.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { FormsModule } from '@angular/forms';
     BemVindo2Component,
     BemVindo3Component,
     FooComponent,
-    BemVindo4Component
+    BemVindo4Component,
+    FuncionarioCardComponent,
+    FuncionarioFormComponent,
+    FuncionarioForm02Component
   ],
   imports: [
     BrowserModule,
